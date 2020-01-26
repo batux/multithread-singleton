@@ -32,3 +32,25 @@ for(int i=0; i < 5; i++) {
 }
 threadPool.shutdown();
 ```
+
+Results with Double Checked Locking:
+
+Log manager was created!
+Task-1, Log Manager Hashcode: 1651719081
+Task-2, Log Manager Hashcode: 1651719081
+Task-4, Log Manager Hashcode: 1651719081
+Task-3, Log Manager Hashcode: 1651719081
+Task-0, Log Manager Hashcode: 1651719081
+
+Results without Double Checked Locking:
+
+Log manager was created!
+Log manager was created!
+Log manager was created!
+Log manager was created!
+Log manager was created!
+Task-3, Log Manager Hashcode: 1651719081
+Task-1, Log Manager Hashcode: 399577663
+Task-0, Log Manager Hashcode: 1861575018
+Task-4, Log Manager Hashcode: 1761651196
+Task-2, Log Manager Hashcode: 327110963
